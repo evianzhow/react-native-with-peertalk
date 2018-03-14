@@ -28,8 +28,8 @@
 {
   NSURL *jsCodeLocation;
 
-  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
 #if TARGET_OS_SIMULATOR || !defined(DEBUG)
+  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
 #else
   _portForwardingServer = [FBPortForwardingServer new];
   [_portForwardingServer forwardConnectionsFromPort:8081];
